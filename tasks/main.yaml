@@ -1,7 +1,7 @@
 ---
 
 - name: Install collectd apt package
-  apt: pkg={{ item  }} state=present
+  apt: pkg={{ item  }} state=present force=yes
   with_items:
     - collectd
   when: ansible_os_family == "Debian"
